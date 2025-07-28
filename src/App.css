@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap');
+
+.App {
+  text-align: center;
+  background: linear-gradient(120deg, #f0f4ff 0%, #ffeaea 80%);
+  min-height: 100vh;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  margin: 48px 0 24px 0;
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #3168e1, #15c6fb, #ff98a1, #ffcf40);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 30px rgba(48, 104, 225, 0.15);
+}
+
+/* ---------- Input & Form Styling ---------- */
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+input[type="text"],
+input[type="search"] {
+  width: 70%;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 12px rgba(21, 198, 251, 0.15);
+  background: linear-gradient(90deg, #fff, #f0f4ff 90%);
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus {
+  box-shadow: 0 0 0 3px #a6e2ff;
+  background: linear-gradient(90deg, #e3f3fd, #ffd8e8 100%);
+}
+
+form button {
+  border-radius: 0 12px 12px 0;
+  margin: 0;
+  padding: 0 28px;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #15c6fb, #ffcf40);
+}
+
+/* --------- Center the Todos List --------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* --------- Todo List Styling --------- */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Each todo as a colorful card */
+li {
+  width: 90%;
+  background: linear-gradient(90deg, #f0f4ff 60%, #ffd8e8 100%);
+  border-radius: 14px;
+  margin: 12px 0;
+  padding: 18px 20px;
+  box-shadow: 0 2px 16px rgba(49, 104, 225, 0.08), 0 1.5px 4px #fff7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.18s;
+  gap: 18px;
+}
+
+li:hover {
+  box-shadow: 0 6px 26px rgba(49, 104, 225, 0.18), 0 2px 12px #ffd8e844;
+  background: linear-gradient(90deg, #e3f4fd 70%, #ffede5 100%);
+}
+
+/* Content and status side-by-side */
+.content {
+  flex: 1 1 50%;
+  text-align: left;
+  font-weight: 700;
+  color: #3168e1;
+  font-size: 1.12rem;
+  word-break: break-word;
+}
+
+.completed,
+.pending {
+  width: 110px;
+  padding: 4px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 1.5px 10px #d1efd9a0;
+}
+
+.completed {
+  background: linear-gradient(90deg, #e5f9e8, #a5f8c4 80%);
+  color: #2e9566;
+  border: 2px solid #a5f8c4;
+}
+
+.pending {
+  background: linear-gradient(90deg, #ffe3e3, #ffd8e8 90%);
+  color: #aa3254;
+  border: 2px solid #ffd8e8;
+}
+
+/* ---------- Center & Colorful Buttons ---------- */
+
+button,
+.btn,
+.btn-warning {
+  display: inline-block;
+  align-self: center;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #3168e1, #15c6fb, #ff98a1);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  filter: drop-shadow(0 2px 10px rgba(49, 104, 225, 0.20));
+  margin: 8px auto;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
+}
+
+button:hover,
+.btn-warning:hover {
+  background: linear-gradient(90deg, #ff98a1, #ffc878, #15c6fb 80%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(21, 198, 251, 0.25), 0 2px 24px #ffcf4030;
+}
+
+.App-link {
+  color: #15c6fb;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #15c6fb;
+  transition: color 0.2s, border-bottom-color 0.2s;
+}
+
+.App-link:hover {
+  color: #ff98a1;
+  border-bottom-color: #ff98a1;
+  letter-spacing: 1px;
+}
+
+/* Responsive fixes */
+@media (max-width: 680px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  li {
+    width: 98%;
+    padding: 13px 8px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
