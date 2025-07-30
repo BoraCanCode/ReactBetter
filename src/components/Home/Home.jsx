@@ -1,16 +1,17 @@
 
+import { Link } from "react-router-dom";
 import "./Home.css";
 
-function Home(){
+function Home() {
 
-    return(
+    return (
         <div className="home-container">
-            <a href="todo" className="btn btn-warning link">
+            <Link to="/todo" className="btn btn-warning link">
                 To Do App
-            </a>
-            <a href="notes" className="btn btn-warning link">
+            </Link>
+            <Link to="/notes" className="btn btn-warning link">
                 Note Keeper
-            </a>
+            </Link>
         </div>
     )
 }
