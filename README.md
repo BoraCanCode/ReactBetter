@@ -1,12 +1,27 @@
-# React + Vite
+# ReactBetter Repository
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains various React projects organized in separate folders.
 
-Currently, two official plugins are available:
+## Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### [Redux Todo App](./reduxToDo/)
+A beautiful Redux-powered Todo application with modern design features:
+- ✨ Modern glassmorphism design
+- 🎨 Beautiful gradients and animations
+- 🔄 Redux state management
+- 📝 Todo creation and toggling
+- 📄 Note creation and deletion
+- 🧭 React Router navigation
+- 📱 Fully responsive design
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Each project has its own folder with complete setup instructions. Navigate to the specific project folder and follow the README there.
+
+## Technologies Used
+
+- React
+- Redux
+- React Router
+- Vite
+- Modern CSS with Glassmorphism 
