@@ -1,14 +1,18 @@
-import { combineReducers, createStore } from "redux";
+// import { combineReducers, createStore } from "redux";
 import { todoReducer } from "./reducers/todoReducer";
 import { noteReducer } from "./reducers/noteReducer";
+import { configureStore } from "@reduxjs/toolkit";
+import { notificationReducer } from "./reducers/notificationReducer";
 
-const rootReducer = combineReducers({
-    todos: todoReducer,
-    notes: noteReducer
-});
+// const rootReducer = combineReducers({
+//     todos: todoReducer,
+//     notes: noteReducer
+// });
 
-export const store = createStore(
-    rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-
+export const store = configureStore({
+    reducer: {
+        todoReducer,
+        noteReducer,
+        notificationReducer
+    }
+})
