@@ -4,7 +4,9 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
     notes: [{
         text: 'Hey this text is passed in reducer',
-        createdOn: new Date()
+
+        createdOn: new Date().toISOString()
+
     }]
 }
 
@@ -19,7 +21,9 @@ const noteSlice = createSlice({
         add: (state, action) => {
             state.notes.push({
                 text: action.payload,
-                createdOn: new Date()
+
+                createdOn: new Date().toISOString()
+
             })
         },
 
